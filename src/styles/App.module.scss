@@ -1,5 +1,6 @@
 .App {
   display: flex;
+  flex-direction: column;
   background-color: #e0ffc8;
   height: 100vh;
 }
@@ -17,6 +18,11 @@
   padding: 0;
 }
 
+.hide {
+  visibility: hidden;
+}
+//  Animations
+
 .mutateBody {
   animation: bodyMutation 5s forwards;
 }
@@ -29,7 +35,6 @@
   animation: buttMutation 5s ease-out forwards;
 }
 
-//  Animations
 
 @keyframes bodyMutation {
   0% {
