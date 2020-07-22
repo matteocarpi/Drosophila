@@ -8,6 +8,13 @@ import classnames from 'classnames';
 function App() {
   const [mutated, setMutated] = useState(false);
   const [mutating, setMutating] = useState(false);
+
+  const mutate = () => {
+    setMutating(true);
+    setTimeout(() => setMutating(false), 6000);
+    setMutated(!mutated);
+  };
+
   return (
     <div className={styles.App}>
       <div className={styles.drosophila}>
@@ -16,11 +23,7 @@ function App() {
         <img src={butt} className={classnames(styles.butt, styles.bodyPart, mutated && styles.mutateButt)}></img>
       </div>
 
-      <button className={classnames(styles.mutationButtonon, mutating && styles.hide)} onClick={() => {
-        setMutating(true);
-        setTimeout(() => setMutating(false), 6000);
-        setMutated(!mutated);
-      }}>{!mutated ? 'Mutate me!' : 'Get me back to normal!'}</button>
+      <button className={classnames(styles.mutationButtonon, mutating && styles.hide)} onClick={() => mutate()}>{!mutated ? 'Mutate me!' : 'Get me back to normal!'}</button>
       {console.log('mutating: ', mutating)};
     </div>
   );
