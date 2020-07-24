@@ -41,9 +41,9 @@ function App() {
         <h2 className={styles.normalTitle}>Drosophila</h2>
       </div>
       <div className={styles.drosophila}>
-        <img src={!mutatedHead ? head : mutatedHeadImg} className={classnames(styles.head, styles.bodyPart, mutated && styles.mutateHead, unMutated && styles.unMutateHead)}></img>
-        <img src={body} className={classnames(styles.body, styles.bodyPart, mutated && styles.mutateBody, unMutated && styles.unMutateBody)}></img>
-        <img src={butt} className={classnames(styles.butt, styles.bodyPart, mutated && styles.mutateButt, unMutated && styles.unMutateButt)}></img>
+        <img alt="head" src={!mutatedHead ? head : mutatedHeadImg} className={classnames(styles.head, styles.bodyPart, mutated && styles.mutateHead, unMutated && styles.unMutateHead)}></img>
+        <img alt="body" src={body} className={classnames(styles.body, styles.bodyPart, mutated && styles.mutateBody, unMutated && styles.unMutateBody)}></img>
+        <img alt="butt" src={butt} className={classnames(styles.butt, styles.bodyPart, mutated && styles.mutateButt, unMutated && styles.unMutateButt)}></img>
       </div>
 
       <button className={classnames(styles.mutationButton, mutating && styles.hide)} onClick={
@@ -58,7 +58,7 @@ function App() {
         }
       </button>
 
-      {console.log('mutating: ', mutating)};
+      {console.log('mutating: ', mutating)}
     </div>
   );
 }

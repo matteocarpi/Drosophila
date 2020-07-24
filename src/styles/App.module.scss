@@ -11,7 +11,7 @@
   margin-bottom: 2rem;
   padding: 0.8rem 1.8rem;
   color: white;
-  background-color: red;
+  background-color: #691f21;
   box-shadow: #9d0000 3px 3px;
   border-style: none;
   font-weight: bold;
@@ -35,14 +35,28 @@
 }
 
 .title {
+  * {
+    margin: 0;
+  }
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-family: 'Tangerine', cursive;
+  h2 {
+    font-size: 50px;
+    color: #50a5db;
+  }
+  h1 {
+    font-size: 65px;
+    color: #a20032;
+  }
 }
 
 .thugTitle {
   animation: titleEntrance 0.4s ease-in;
+  font-family: 'Permanent Marker', cursive;
 }
 //  Animations
 
