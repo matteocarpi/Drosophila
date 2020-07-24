@@ -1,10 +1,22 @@
 .App {
   display: flex;
   flex-direction: column;
-  background-color: #e0ffc8;
+  align-items: center;
   height: 100vh;
 }
 
+.mutationButton {
+  width: min-content;
+  min-width: 250px;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1.8rem;
+  color: white;
+  background-color: red;
+  box-shadow: #9d0000 3px 3px;
+  border-style: none;
+  font-weight: bold;
+  font-size: 25px;
+}
 .drosophila {
   display: flex;
   flex-direction: column;
@@ -20,6 +32,17 @@
 
 .hide {
   visibility: hidden;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thugTitle {
+  animation: titleEntrance 0.4s ease-in;
 }
 //  Animations
 
@@ -46,6 +69,8 @@
 .unMutateButt {
   animation: buttUnMutation 3s ease-out forwards;
 }
+
+// KeyFrames
 
 @keyframes bodyUnMutation {
   0% {
@@ -134,5 +159,19 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes titleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

@@ -36,13 +36,17 @@ function App() {
 
   return (
     <div className={styles.App}>
+      <div className={styles.title}>
+        <h1 className={classnames(mutatedHead && styles.thugTitle, !mutatedHead && styles.hide)}>HeadButt</h1>
+        <h2 className={styles.normalTitle}>Drosophila</h2>
+      </div>
       <div className={styles.drosophila}>
         <img src={!mutatedHead ? head : mutatedHeadImg} className={classnames(styles.head, styles.bodyPart, mutated && styles.mutateHead, unMutated && styles.unMutateHead)}></img>
         <img src={body} className={classnames(styles.body, styles.bodyPart, mutated && styles.mutateBody, unMutated && styles.unMutateBody)}></img>
         <img src={butt} className={classnames(styles.butt, styles.bodyPart, mutated && styles.mutateButt, unMutated && styles.unMutateButt)}></img>
       </div>
 
-      <button className={classnames(styles.mutationButtonon, mutating && styles.hide)} onClick={
+      <button className={classnames(styles.mutationButton, mutating && styles.hide)} onClick={
         mutated === false
           ? () => mutate()
           : () => unMutate()
