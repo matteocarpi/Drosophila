@@ -5,6 +5,7 @@ import body from './images/body.png';
 import butt from './images/butt.png';
 import styles from './styles/App.module.scss';
 import classnames from 'classnames';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [mutated, setMutated] = useState(false);
@@ -36,6 +37,9 @@ function App() {
 
   return (
     <div className={styles.App}>
+      <Helmet>
+        <title>{mutated ? 'HeadButt Drosophila' : 'Drosophila'}</title>
+      </Helmet>
       <div className={styles.title}>
         <h1 className={classnames(mutatedHead && styles.thugTitle, !mutatedHead && styles.hide)}>HeadButt</h1>
         <h2 className={styles.normalTitle}>Drosophila</h2>
